@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hunger Games Image Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/hunger_games_gallery.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <h1 id="header">The Hunger Games Image Gallery</h1>
+
+        <a href="movie1.html"><img id="back_arrow" src="images/back_arrow.png" alt=""/></a>
+
+        <div class="row">
+            <div class="column">
+                <img src="images/gallery/gallery_one.jpg" alt="" onclick="openModal();currentSlide(1)" class="hover-shadow">   
+                <img src="images/gallery/gallery_five.jpg" alt="" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                <img src="images/gallery/gallery_nine.jpg" alt="" onclick="openModal();currentSlide(9)" class="hover-shadow">
+                <img src="images/gallery/gallery_thirteen.jpg" alt="" onclick="openModal();currentSlide(13)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/gallery/gallery_two.jpg" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <img src="images/gallery/gallery_six.jpg" alt="" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                <img src="images/gallery/gallery_ten.jpg" alt="" onclick="openModal();currentSlide(10)" class="hover-shadow"> 
+                <img src="images/gallery/gallery_fourteen.jpg" alt="" onclick="openModal();currentSlide(14)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/gallery/gallery_three.jpg" alt="" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                <img src="images/gallery/gallery_seven.jpg" alt="" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                <img src="images/gallery/gallery_eleven.jpg" alt="" onclick="openModal();currentSlide(11)" class="hover-shadow">
+                <img src="images/gallery/gallery_fifteen.jpg" alt="" onclick="openModal();currentSlide(15)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/gallery/gallery_four.jpg" alt="" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                <img src="images/gallery/gallery_eight.jpg" alt="" onclick="openModal();currentSlide(8)" class="hover-shadow">
+                <img src="images/gallery/gallery_twelve.jpg" alt="" onclick="openModal();currentSlide(12)" class="hover-shadow">
+                <img src="images/gallery/gallery_sixteen.jpg" alt="" onclick="openModal();currentSlide(16)" class="hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 16</div>
+                    <img src="images/gallery/gallery_one.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 16</div>
+                    <img src="images/gallery/gallery_two.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 16</div>
+                    <img src="images/gallery/gallery_three.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 16</div>
+                    <img src="images/gallery/gallery_four.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 16</div>
+                    <img src="images/gallery/gallery_five.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 16</div>
+                    <img src="images/gallery/gallery_six.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 16</div>
+                    <img src="images/gallery/gallery_seven.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">8 / 16</div>
+                    <img src="images/gallery/gallery_eight.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">9 / 16</div>
+                    <img src="images/gallery/gallery_nine.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">10 / 16</div>
+                    <img src="images/gallery/gallery_ten.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">11 / 16</div>
+                    <img src="images/gallery/gallery_eleven.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">12 / 16</div>
+                    <img src="images/gallery/gallery_twelve.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">13 / 16</div>
+                    <img src="images/gallery/gallery_thirteen.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">14 / 16</div>
+                    <img src="images/gallery/gallery_fourteen.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">15 / 16</div>
+                    <img src="images/gallery/gallery_fifteen.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">16 / 16</div>
+                    <img src="images/gallery/gallery_sixteen.jpg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+        </script>       
+    </body>
+</html>

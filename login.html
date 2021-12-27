@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+    <!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://previews.123rf.com/images/vectorstockcompany/vectorstockcompany1808/vectorstockcompany180815736/108455226-popcorn-vector-icon-isolated-on-transparent-background-popcorn-logo-concept.jpg" type="image/x-icon">
+        <link href="css/login page.css" rel="stylesheet" type="text/css"/>
+        <script>
+            function isUsernameValid()
+            {
+                let errorMessage = ""
+
+                let pattern = /^$/;
+
+                if (pattern.test(document.getElementById("username").value) === true)
+                {
+                    errorMessage += "<div>Username cannot be empty</div>"
+                }
+
+                document.getElementById("usernameErrorMessage").innerHTML = errorMessage
+                return (errorMessage.length === 0)
+
+            }
+
+            function isPasswordValid()
+            {
+                let errorMessage = ""
+
+                let pattern = /^$/;
+
+                if (pattern.test(document.getElementById("password").value) === true)
+                {
+                    errorMessage += "<div>Password cannot be empty</div>"
+                }
+
+                let patternTwo = /^[A-Z]/
+
+                if (patternTwo.test(document.getElementById("password").value) === false)
+                {
+                    errorMessage += "<div>Password must begin with a capital letter</div>"
+                }
+
+                let patternThree = /\d{4}$/
+
+                if (patternThree.test(document.getElementById("password").value) === false)
+                {
+                    errorMessage += "<div>Password must end with four numbers</div>"
+                }
+
+                document.getElementById("passwordErrorMessage").innerHTML = errorMessage
+                return (errorMessage.length === 0)
+
+            }
+
+            function isFormValid()
+            {
+                /* Validate all of the input elements */
+                let usernameIsValid = isUsernameValid()
+                let passwordIsValid = isPasswordValid();
+
+                /* If ALL of the element validation functions pass, then the form is valid */
+                if (usernameIsValid && passwordIsValid)
+                {
+                    return true
+                } else /* If ANY of the element validation functions fail, then the form fails */
+                {
+                    return false
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <div class="imdb_container center">
+
+            <img src ="images/imdb.png" alt="">
+        </div>
+        <div id="background-img">
+
+            <img src="images/movie-montage.jpg" alt="">
+
+        </div>
+        <form class="details_container" onsubmit = "return isFormValid()" action="home.html">
+
+            <h1>Login</h1>
+
+            <label for="username"><b>Username:</b></label>
+            <input type="text" id="username" name="username" onsubmit="isUsernameValid()">
+            <div class="errorMessage" id ="usernameErrorMessage"></div>
+            <br>
+
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" name="password" onsubmit="isPasswordValid()">
+            <div class="errorMessage" id ="passwordErrorMessage"></div>
+            <br>
+            <br>
+
+            <input type="submit" value="Login">
+
+        </form>
+
+        <div class ="bottom_bar">
+
+            <h1>IMDB</h1>
+
+        </div>
+    </body>
+</html>

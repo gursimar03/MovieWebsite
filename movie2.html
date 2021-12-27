@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ex Machina</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="https://previews.123rf.com/images/vectorstockcompany/vectorstockcompany1808/vectorstockcompany180815736/108455226-popcorn-vector-icon-isolated-on-transparent-background-popcorn-logo-concept.jpg" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <a href="home.html" class="nav-logo">DeezMovies</a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Discover</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Submit Your Movie</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <div class="item" id="aboutMovie"><img src="moviePosters/Movienow122.jpg" alt=""/><h1 class="movieName">Ex Machina</h1> 
+        </div>
+        <div class="movieTrailers">
+            <iframe width="800" src="https://www.youtube.com/embed/gyKqHOgMi4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="about">
+            <p><h1>About the movie:</h1>
+            <p>A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.</p>
+            <h4 class="noPadding">Director:</h4>
+            Alex Garland
+            <br><br>
+            <h4 class="noPadding">Writer:</h4>
+            Alex Garland
+            <br><br>
+            <h4 class="noPadding">Stars:</h4>
+            Alicia Vikander, Domhnall Gleeson, Oscar Isaac
+        </div>
+        <br>
+        <h1 id="castPadding">Cast:</h1>
+        <div class="castItem">
+            <div class="name"><b>Alicia Vikander</b> <br> As Ava</div>
+            <div class="item castImage">
+                <img  class="castImage" src="images/alicia-vikander.jpg" alt=""/>
+            </div>
+            <div class="name"><b>Domhnall Gleeson</b><br> As Caleb</div>
+            <div class="item castImage">
+                <img class="castImage" src="images/domhnall-gleeeson.jpg" alt=""/>
+            </div>
+            <div class="name"><b>Oscar Isaac</b><br> As Nathan</div>
+            <div class="item castImage">
+                <img class="castImage" src="images/oscar-isaac.jpg" alt=""/>
+            </div>
+            <div class="name"><b>Sonoya Mizuno</b><br> As Kyoko</div>
+            <div class="item castImage">
+                <img class="castImage" src="images/sonoya-mizuno.jpg" alt=""/>
+            </div>
+        </div>
+        <footer>
+            <div class="content">
+                <div class="left box">
+                    <div class="upper">
+                        <div class="topic">About us</div>
+                        <p>IMDB is an online database of information related to films, television series, home videos, video games, and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews.</p>
+                    </div>
+                    <div class="lower">
+                        <div class="topic">Contact us</div>
+                        <div class="phone">
+                            <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+                        </div>
+                        <div class="email">
+                            <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle box">
+                    <div class="topic">Our Services</div>
+                    <div><a href="#">Movies</a></div>
+                    <div><a href="#">Video Games</a></div>
+                    <div><a href="#">Comedies</a></div>
+                </div>
+                <div class="right box">
+                    <div class="topic">Subscribe to us</div>
+                    <form action="#">
+                        <input type="email" placeholder="Enter email address">
+                        <input type="submit"  value="Send">
+                        <div class="media-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", mobileMenu);
+
+            function mobileMenu() {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            }
+
+            const navLink = document.querySelectorAll(".nav-link");
+
+            navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+            function closeMenu() {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }
+        </script>
+    </body>
+</html>

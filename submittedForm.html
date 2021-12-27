@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/submitted_form.css" rel="stylesheet" type="text/css"/>
+        
+        <script>
+            function getUrlValue(urlParameterName)
+            {
+                const queryString = window.location.search
+                const urlParameters = new URLSearchParams(queryString)
+                return urlParameters.get(urlParameterName)
+            }
+            
+        </script>
+    </head>
+    <body>
+        
+        <header class="header">
+            <nav class="navbar">
+                <a href="home.html" class="nav-logo">DeezMovies</a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Submit Your Movie</a>
+                    </li>
+
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        
+        <svg id="svg" viewBox="0 0 1440 700" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 C 0,700 0,350 0,350 C 110.92857142857142,311.92857142857144 221.85714285714283,273.85714285714283 352,266 C 482.14285714285717,258.14285714285717 631.4999999999999,280.5 756,296 C 880.5000000000001,311.5 980.1428571428573,320.14285714285717 1090,328 C 1199.8571428571427,335.85714285714283 1319.9285714285713,342.92857142857144 1440,350 C 1440,350 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#7d26cdff" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 350)"></path></svg>
+        
+        <div class="content_container">
+        
+        <label for = "movietitle"><b>Movie Title:</b> </label>
+        <label id = "movietitle"></label>
+        <br>
+        <br>
+        <label for = "title_type"><b>Title Type:</b> </label>
+        <label id = "title_type"></label>
+        <br>
+        <br>
+        
+        <fieldset>
+            <legend id="form">Release Date:</legend>
+        <label for = "input_from"><b>From:</b> </label>
+        
+        <div class="inline">
+        <label id ="day-1"></label>/
+        <label id = "month-1"></label>/
+        <label id = "year-1"></label>
+        </div>
+        <br>
+        <label for = "input_to"><b>To:</b> </label>
+        <div class="inline"> 
+        <label id ="day-2"></label>/
+        <label id = "month-2"></label>/
+        <label id = "year-2"></label>
+        </div>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend>User Ratings</legend>
+        <label id = "user_rating-min"></label>
+        <label><b>To</b> </label>
+        <label id = "user_rating-max"></label>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Number of Votes</legend>
+            <label id = "num_votes-min"></label>
+        <label><b>To</b> </label>
+        <label id = "num_votes-max"></label>
+        </fieldset>
+        <br>
+        <br>
+        <label for = "genres"><b>Genres:</b></label>
+        <label class="label_lists" id = "genres"></label>
+        <label class="label_lists" id = "genres-2"></label>
+        <label class="label_lists" id = "genres-3"></label>
+        <label class="label_lists" id = "genres-4"></label>
+        <label class="label_lists" id = "genres-5"></label>
+        <label class="label_lists" id = "genres-6"></label>
+        <label class="label_lists" id = "genres-7"></label>
+        <label class="label_lists" id = "genres-8"></label>
+        <label class="label_lists" id = "genres-9"></label>
+        <label class="label_lists" id = "genres-10"></label>
+        <label class="label_lists" id = "genres-11"></label>
+        <label class="label_lists" id = "genres-12"></label>
+        <label class="label_lists" id = "genres-13"></label>
+        <label class="label_lists" id = "genres-14"></label>
+        <label class="label_lists" id = "genres-15"></label>
+        <label class="label_lists" id = "genres-16"></label>
+        <label class="label_lists" id = "genres-17"></label>
+        <label class="label_lists" id = "genres-18"></label>
+        <label class="label_lists" id = "genres-19"></label>
+        <label class="label_lists" id = "genres-20"></label>
+        <label class="label_lists" id = "genres-21"></label>
+        <label class="label_lists" id = "genres-22"></label>
+        <label class="label_lists" id = "genres-23"></label>
+        <label class="label_lists" id = "genres-24"></label>
+        <label class="label_lists" id = "genres-25"></label>
+        <label class="label_lists" id = "genres-26"></label>
+        <br>
+        <br>
+        <label for = "groups"><b>Groups:</b> </label>
+        <label class="label_lists" id = "groups"></label>
+        <label class="label_lists" id = "groups-2"></label>
+        <label class="label_lists" id = "groups-3"></label>
+        <label class="label_lists" id = "groups-4"></label>
+        <label class="label_lists" id = "groups-5"></label>
+        <label class="label_lists" id = "groups-6"></label>
+        <label class="label_lists" id = "groups-7"></label>
+        <label class="label_lists" id = "groups-8"></label>
+        <label class="label_lists" id = "groups-9"></label>
+        <label class="label_lists" id = "groups-10"></label>
+        <label class="label_lists" id = "groups-11"></label>
+        <label class="label_lists" id = "groups-12"></label>
+        <label class="label_lists" id = "groups-13"></label>
+        <label class="label_lists" id = "groups-14"></label>
+        <label class="label_lists" id = "groups-15"></label>
+        <label class="label_lists" id = "groups-16"></label>
+        <label class="label_lists" id = "groups-17"></label>
+        <label class="label_lists" id = "groups-18"></label>
+        <label class="label_lists" id = "groups-19"></label>
+        <label class="label_lists" id = "groups-20"></label>
+        <br>
+        <br>
+        <label for = "has"><b>Title Data:</b> </label>
+        <label id = "has"></label>
+        <br>
+        <br>
+        <label for = "companies"><b>Companies:</b> </label>
+        <label class="label_lists" id = "companies"></label>
+        <label class="label_lists" id = "companies-2"></label>
+        <label class="label_lists" id = "companies-3"></label>
+        <label class="label_lists" id = "companies-4"></label>
+        <label class="label_lists" id = "companies-5"></label>
+        <label class="label_lists" id = "companies-6"></label>
+        <label class="label_lists" id = "companies-7"></label>
+        <label class="label_lists" id = "companies-8"></label>
+        <br>
+        <br>
+        <label for = "certificates"><b>Certificates:</b> </label>
+        <label class="label_lists" id = "certificates"></label>
+        <label class="label_lists" id = "certificates-2"></label>
+        <label class="label_lists" id = "certificates-3"></label>
+        <label class="label_lists" id = "certificates-4"></label>
+        <label class="label_lists" id = "certificates-5"></label>
+        <br>
+        <br>
+        <label for = "countries"><b>Countries:</b> </label>
+        <label id = "countries"></label>
+        <br>
+        <br>
+        <label for = "languages"><b>Languages:</b> </label>
+        <label id = "languages"></label>
+        
+        </div>
+        
+        <script>
+            document.getElementById("movietitle").innerHTML = getUrlValue("movietitle")
+            document.getElementById("title_type").innerHTML = getUrlValue("title_type")
+            document.getElementById("day-1").innerHTML = getUrlValue("day-1")
+            document.getElementById("month-1").innerHTML = getUrlValue("month-1")
+            document.getElementById("year-1").innerHTML = getUrlValue("year-1")
+            document.getElementById("day-2").innerHTML = getUrlValue("day-2")
+            document.getElementById("month-2").innerHTML = getUrlValue("month-2")
+            document.getElementById("year-2").innerHTML = getUrlValue("year-2")
+            document.getElementById("input_to").innerHTML = getUrlValue("input_to")
+            document.getElementById("user_rating-min").innerHTML = getUrlValue("user_rating-min")
+            document.getElementById("user_rating-max").innerHTML = getUrlValue("user_rating-max")
+            document.getElementById("num_votes-min").innerHTML = getUrlValue("num_votes-min")
+            document.getElementById("num_votes-max").innerHTML = getUrlValue("num_votes-max")
+            document.getElementById("genres").innerHTML = getUrlValue("genres")
+            document.getElementById("groups").innerHTML = getUrlValue("groups")
+            document.getElementById("groups-2").innerHTML = getUrlValue("groups-2")
+            document.getElementById("groups-3").innerHTML = getUrlValue("groups-3")
+            document.getElementById("groups-4").innerHTML = getUrlValue("groups-4")
+            document.getElementById("groups-5").innerHTML = getUrlValue("groups-5")
+            document.getElementById("groups-6").innerHTML = getUrlValue("groups-6")
+            document.getElementById("groups-7").innerHTML = getUrlValue("groups-7")
+            document.getElementById("groups-8").innerHTML = getUrlValue("groups-8")
+            document.getElementById("groups-9").innerHTML = getUrlValue("groups-9")
+            document.getElementById("groups-10").innerHTML = getUrlValue("groups-10")
+            document.getElementById("groups-11").innerHTML = getUrlValue("groups-11")
+            document.getElementById("groups-12").innerHTML = getUrlValue("groups-12")
+            document.getElementById("groups-13").innerHTML = getUrlValue("groups-13")
+            document.getElementById("groups-14").innerHTML = getUrlValue("groups-14")
+            document.getElementById("groups-15").innerHTML = getUrlValue("groups-15")
+            document.getElementById("groups-16").innerHTML = getUrlValue("groups-16")
+            document.getElementById("groups-17").innerHTML = getUrlValue("groups-17")
+            document.getElementById("groups-18").innerHTML = getUrlValue("groups-18")
+            document.getElementById("groups-19").innerHTML = getUrlValue("groups-19")
+            document.getElementById("groups-20").innerHTML = getUrlValue("groups-20")
+            document.getElementById("has").innerHTML = getUrlValue("has")
+            document.getElementById("companies").innerHTML = getUrlValue("companies")
+            document.getElementById("companies-2").innerHTML = getUrlValue("companies-2")
+            document.getElementById("companies-3").innerHTML = getUrlValue("companies-3")
+            document.getElementById("companies-4").innerHTML = getUrlValue("companies-4")
+            document.getElementById("companies-5").innerHTML = getUrlValue("companies-5")
+            document.getElementById("companies-6").innerHTML = getUrlValue("companies-6")
+            document.getElementById("companies-7").innerHTML = getUrlValue("companies-7")
+            document.getElementById("companies-8").innerHTML = getUrlValue("companies-8")
+            document.getElementById("certificates").innerHTML = getUrlValue("certificates")
+            document.getElementById("certificates-2").innerHTML = getUrlValue("certificates-2")
+            document.getElementById("certificates-3").innerHTML = getUrlValue("certificates-3")
+            document.getElementById("certificates-4").innerHTML = getUrlValue("certificates-4")
+            document.getElementById("certificates-5").innerHTML = getUrlValue("certificates-5")
+            document.getElementById("countries").innerHTML = getUrlValue("countries")
+            document.getElementById("languages").innerHTML = getUrlValue("languages")
+            
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+        </script>
+    </body>
+</html>
